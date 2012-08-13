@@ -30,6 +30,8 @@
   *
  * @package defaultresourcegroup
  *
+ * Connect to OnDocFormSave
+ *
  * @property dug_groups (string) comma-separated list of resource groups
  */
 
