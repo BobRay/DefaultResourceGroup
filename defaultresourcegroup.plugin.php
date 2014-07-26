@@ -48,3 +48,5 @@ if (!empty($groupSetting)) {
       $success = $resource->joinGroup(trim($group));
    }
 }
+
+return '';
