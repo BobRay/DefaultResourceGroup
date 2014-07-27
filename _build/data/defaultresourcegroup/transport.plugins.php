@@ -2,7 +2,7 @@
 /**
  * plugins transport file for DefaultResourceGroup extra
  *
- * Copyright 2013-2014 by Bob Ray <http://bobsguides.com>
+ * Copyright 2011-2014 by Bob Ray <http://bobsguides.com>
  * Created on 07-26-2014
  *
  * @package defaultresourcegroup
@@ -28,9 +28,16 @@ $plugins = array();
 $plugins[1] = $modx->newObject('modPlugin');
 $plugins[1]->fromArray(array (
   'id' => 1,
-  'description' => 'Assigns all new Resources to designated resource group(s)',
+  'property_preprocess' => false,
   'name' => 'DefaultResourceGroup',
+  'description' => 'Assigns new resources to one or more Resource Groups',
+  'disabled' => true,
 ), '', true, true);
 $plugins[1]->setContent(file_get_contents($sources['source_core'] . '/elements/plugins/defaultresourcegroup.plugin.php'));
+
+
+$properties = include $sources['data'].'properties/properties.defaultresourcegroup.plugin.php';
+$plugins[1]->setProperties($properties);
+unset($properties);
 
 return $plugins;
