@@ -3,7 +3,7 @@
 /**
  * DefaultResourceGroup
  *
- * Copyright 2011 Bob Ray
+ * Copyright 2011-2014 Bob Ray
  *
  * @author Bob Ray
  * 1/20/12
