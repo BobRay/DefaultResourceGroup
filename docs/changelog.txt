@@ -1,5 +1,0 @@
-Changelog for DefaultResourceGroup Plugin
-
-DefaultResourceGroup 1.0.0
---------------------------
-Initial Version

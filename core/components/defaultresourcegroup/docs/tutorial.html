@@ -1,0 +1,62 @@
+<p>DefaultResourceGroup is a plugin for MODX Revolution. It automatically places newly created Resources into one or more designated Resource Groups.</p>
+
+<h3>Overview</h3>
+<p>The DefaultResourceGroup plugin places all new resources into a default Resource Group or groups. It will not change the Resource Group settings of existing resources when you edit them. If the user checks certain Resource Groups when creating the resource, those selections will be honored, but the plugin will also add the resource to the specified default Resource Groups.</p>
+
+<p>If, for example, you want to give users other than the admin Super User (or users who are not members of the Administrator User Group) access to only a small subset of the resources on a site, you could create a Resource Group called AllDocs and connect that Resource Group to the Administrator group with a Resource Group Access ACL entry. Then, tell the plugin to put all new resources in the AllDocs Resource Group. That way, every resource on the site will be hidden from other users. You can then give those users access to specific resources and the rest will remain hidden.</p>
+
+<p>The plugin will work on new resources created on the Create/Edit Resource panel, or resources created using the &quot;Quick Create&quot; option when you right-click in the tree. It will have no effect when editing existing resources, or when duplicating existing resources. The plugin will not affect resources created in code or by extras such as NewsPublisher.</p>
+
+<h3>Installing DefaultResourceGroup</h3>
+
+<p>
+Go to System | Package Management on the main menu in the MODX Manager and click on the &quot;Download Extras&quot; button. That will take you to the Revolution Repository (AKA Web Transport Facility). Put DefaultResourceGroup in the search box and press Enter. Click on the &quot;Download&quot; button, and once the package is downloaded, click on the &quot;Back to Package Manager&quot; button. That should bring you back to your Package Management grid. Click on the &quot;Install&quot; button next to DefaultResourceGroup in the grid. The DefaultResourceGroup package should now be installed.</p>
+
+<h3>Properties</h3>
+<p>There is only one property for the plugin, it is the <fixedpre>drg_groups</fixedpre> property. It contains either the name of a specific Resource Group to put new resources in, or a comma-separated list of group names (use no spaces). Rather than changing the default property of the plugin to set <fixedpre>drg_groups</fixedpre>, you should always create a Property Set.</p>
+
+<p><b>Important:</b> Be sure to clear the site cache after setting or changing the property.</p>
+
+<h3>Creating a Property Set for the Plugin</h3>
+
+<p>If a plugin has default properties, you can set those properties on the Properties tag when editing the plugin. This is a bad practice, however, because the values you set may be overwritten when the plugin is upgraded. Instead, you should create your own Property Set for the plugin and then attach it to the plugin.</p>
+
+<p> <b>Creating the Property Set</b></p>
+<ol>
+    <li>Right-click on the plugin in the Element tree and select &quot;Edit Plugin&quot;</li>
+    <li>On the right panel, click on the &quot;Properties&quot; tab</li>
+    <li>Click on the &quot;Add Property Set&quot; button</li>
+    <li>Check the &quot;Create New Property Set&quot; checkbox</li>
+    <li>Give the Property set a unique name (e.g., My<i>PluginName</i>Properties)</li>
+    <li>Click on the &quot;Save&quot; button</li>
+    <li>You should see the Property Set name above the grid</li>
+    <li>(If you see 'Default' instead of your property set name, click on it and select your Property Set from the drop-down list)</li>
+    <li>Note that your Property Set has not been saved</li>
+    <li>Set property values by double-clicking in the &quot;Value&quot; column or right-clicking on the property and selecting &quot;Update
+        Property&quot;</li>
+    <li>When finished setting values, click on the &quot;Save Property Set&quot; button at the upper right</li>
+</ol>
+
+<p>As you edit plugin values, you will see the default properties in the grid, but they are not really &quot;in&quot; your Property Set. They're just there for your information. The only properties truly in your set are the ones you change. After you save the Property Set, the properties you've changed will be in a different color (usually green). If you add new properties to your Property Set that are not in the default properties (using the &quot;Create Property&quot; button), they will be in yet another color (usually purple).</p>
+
+<p>Important! Whenever you go back to edit the Property Set in the future, select it from the drop-down list above the grid (where it says 'default'). Don't forget to save your changes by clicking on the &quot;Save Property Set&quot; button.</p>
+
+<p> <b>Attaching the Property Set to the Plugin</b></p>
+
+<p>The values in your Property Set will have no effect until you attach them to your plugin. To attach them, follow these steps:</p>
+
+<ol>
+    <li>While still editing the plugin, click on the &quot;System Events&quot; tab</li>
+    <li>Scroll down to see which System Events the plugin is connected to</li>
+    <li>In the row of the System Event, you should see two numbers on the right</li>
+    <li>The left number (in the &quot;Property Set&quot; column) specifies the Property Set</li>
+    <li>Often, you will see a 0 there, which tells the plugin to use the default properties</li>
+    <li>If you double-click on the number, you should see a drop-down list</li>
+    <li>Select your Property Set from the list</li>
+    <li>If the plugin listens to multiple events, be sure to set the Property Set on all of them</li>
+    <li>Click on the &quot;Save&quot; button at the upper right to save the plugin and the Property Set specification</li>
+</ol>
+
+<p>If the plugin listens to more than one event, you can have a different Property Set for each event, but it's also fine to put all the properties in one Property Set and specify that set for all events.</p>
+
+<p>&nbsp;</p>
