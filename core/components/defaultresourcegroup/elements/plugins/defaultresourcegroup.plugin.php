@@ -1,14 +1,16 @@
 <?php
 /**
- * DefaultResourceGroup plugin for DefaultResourceGroup extra
+ * DefaultResourceGroup
+ * 
+ * Copyright 2012-2014 Bob Ray
  *
- * Copyright 2013-2014 by Bob Ray <http://bobsguides.com>
- * Created on 07-26-2014
+ * @author Bob Ray
+ * @created 1/20/12
  *
- * DefaultResourceGroup is free software; you can redistribute it and/or modify it under the
- * terms of the GNU General Public License as published by the Free Software
- * Foundation; either version 2 of the License, or (at your option) any later
- * version.
+ * DefaultResourceGroup is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License as published by the Free
+ * Software Foundation; either version 2 of the License, or (at your option) any
+ * later version.
  *
  * DefaultResourceGroup is distributed in the hope that it will be useful, but WITHOUT ANY
  * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
@@ -20,31 +22,32 @@
  *
  * @package defaultresourcegroup
  */
-
 /**
- * Description
- * -----------
- * Assigns all new Resources to designated resource group(s)
+ * MODx DefaultResourceGroup Snippet
  *
- * Variables
- * ---------
- * @var $modx modX
- * @var $scriptProperties array
- *
+ * Description Adds resources to default resource group(s)
+  *
  * @package defaultresourcegroup
- **/
+ *
+ * @param drg_groups string -- comma-separated list of resource groups
+ */
+
+  $drg_groups = null;
+
+/** @var $modx modX */
+/** @var $scriptProperties array */
 
 /* only operate on new resources */
 if ($mode != modSystemEvent::MODE_NEW) return;
 
-$groupSetting = $modx->getOption('drg_groups', $scriptProperties, NULL);
+$groupSetting = $modx->getOption('drg_groups', $scriptProperties, null);
 
 if (!empty($groupSetting)) {
-    $groups = explode(',', $groupSetting);
+   $groups = explode(',',$groupSetting);
 
-    foreach ($groups as $group) {
-        $success = $resource->joinGroup(trim($group));
-    }
+   foreach ($groups as $group) {
+      $success = $resource->joinGroup(trim($group));
+   }
 }
 
 return '';
