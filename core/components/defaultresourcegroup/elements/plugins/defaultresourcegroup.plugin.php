@@ -37,16 +37,39 @@
 /** @var $modx modX */
 /** @var $scriptProperties array */
 
+function matchParent($resource) {
+
+    /** @var $resource modResource */
+    /** @var $grpObject modResourceGroupResource */
+
+    $parentId = $resource->get('parent');
+
+    $res = $parentId;
+    /* top level documents are not regarded! */
+    if ($parentId > 0) {
+        $parentResource = $resource->getOne('Parent');
+        $groups = $parentResource->getMany('ResourceGroupResources');
+        foreach ($groups as $name => $grpObject) {
+            $resGrpId = (int) $grpObject->get('document_group');
+            @$resource->joinGroup($resGrpId);
+        }
+    }
+}
+
 /* only operate on new resources */
 if ($mode != modSystemEvent::MODE_NEW) return;
 
 $groupSetting = $modx->getOption('drg_groups', $scriptProperties, null);
 
 if (!empty($groupSetting)) {
-   $groups = explode(',',$groupSetting);
+   if ($groupSetting == 'parent' || $groupSetting == 'Parent') {
+       matchParent($resource);
+   } else {
+       $groups = explode(',', $groupSetting);
 
-   foreach ($groups as $group) {
-      $success = $resource->joinGroup(trim($group));
+       foreach ($groups as $group) {
+           $success = $resource->joinGroup(trim($group));
+       }
    }
 }
 
