@@ -2,6 +2,10 @@ Changelog for DefaultResourceGroup
 
 DefaultResourceGroup 1.1.0-pl
 ---------------------------------
+Add option to inherit parent's groups
+
+DefaultResourceGroup 1.1.0-pl
+---------------------------------
 Update for MODX 2.3
 
 DefaultResourceGroup 1.0.0

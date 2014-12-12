@@ -13,7 +13,9 @@
 Go to System | Package Management on the main menu in the MODX Manager and click on the &quot;Download Extras&quot; button. That will take you to the Revolution Repository (AKA Web Transport Facility). Put DefaultResourceGroup in the search box and press Enter. Click on the &quot;Download&quot; button, and once the package is downloaded, click on the &quot;Back to Package Manager&quot; button. That should bring you back to your Package Management grid. Click on the &quot;Install&quot; button next to DefaultResourceGroup in the grid. The DefaultResourceGroup package should now be installed.</p>
 
 <h3>Properties</h3>
-<p>There is only one property for the plugin, it is the <fixedpre>drg_groups</fixedpre> property. It contains either the name of a specific Resource Group to put new resources in, or a comma-separated list of group names (use no spaces). Rather than changing the default property of the plugin to set <fixedpre>drg_groups</fixedpre>, you should always create a Property Set.</p>
+<p>There is only one property for the plugin, it is the <fixedpre>drg_groups</fixedpre> property. It contains either the name of a specific Resource Group to put new resources in, or a comma-separated list of group names (use no spaces). If the property is set to <fixedpre>Parent</fixedpre>, new resources will inherit the parent's resource groups.
+
+Rather than changing the default property of the plugin to set <fixedpre>drg_groups</fixedpre>, you should always create a Property Set.</p>
 
 <p><b>Important:</b> Be sure to clear the site cache after setting or changing the property.</p>
 
