@@ -16,7 +16,7 @@ $properties = array (
   'drg_groups' => 
   array (
     'name' => 'drg_groups',
-    'desc' => 'Resource Group name or comma-separated list of Resource Group names to assign new resources to.',
+    'desc' => 'Resource Group name or comma-separated list of Resource Group names to assign new resources to. Set to `Parent` to have new resources inherit their parent\'s resource groups.',
     'type' => 'textfield',
     'options' => 
     array (
