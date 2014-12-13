@@ -1,6 +1,6 @@
 Changelog for DefaultResourceGroup
 
-DefaultResourceGroup 1.1.0-pl
+DefaultResourceGroup 1.2.0-pl
 ---------------------------------
 Add option to inherit parent's groups
 
