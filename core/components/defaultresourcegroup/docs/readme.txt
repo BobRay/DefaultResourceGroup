@@ -2,13 +2,13 @@
 DefaultResourceGroup
 
 
-Author: Bob Ray <http://bobsguides.com>
-Copyright 2013-2014
+Author: Bob Ray <https://bobsguides.com>
+Copyright 2012-2017
 
-Official Documentation: http://bobsguides.com/defaultresourcegroup-tutorial.html
+Official Documentation: https://bobsguides.com/defaultresourcegroup-tutorial.html
 
 Bugs and Feature Requests: https://github.com:BobRay/DefaultResourceGroup
 
-Questions: http://forums.modx.com
+Questions: https://forums.modx.com
 
 Created by MyComponent

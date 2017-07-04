@@ -19,10 +19,10 @@ $components = array(
     'version' => '1.2.0',
     'release' => 'p1',
     'author' => 'Bob Ray',
-    'email' => '<http://bobsguides.com>',
-    'authorUrl' => 'http://bobsguides.com',
+    'email' => '<https://bobsguides.com>',
+    'authorUrl' => 'https://bobsguides.com',
     'authorSiteName' => "Bob's Guides",
-    'packageDocumentationUrl' => 'http://bobsguides.com/defaultresourcegroup-tutorial.html',
+    'packageDocumentationUrl' => 'https://bobsguides.com/defaultresourcegroup-tutorial.html',
     'copyright' => '2012-2015',
 
     /* no need to edit this except to change format */
