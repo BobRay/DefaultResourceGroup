@@ -2,7 +2,7 @@
 /**
 * Resolver to connect plugins to system events for DefaultResourceGroup extra
 *
-* Copyright 2012-2017 by Bob Ray <https://bobsguides.com>
+* Copyright 2012-2017 Bob Ray <https://bobsguides.com>
 * Created on 07-26-2014
 *
  * DefaultResourceGroup is free software; you can redistribute it and/or modify it under the
