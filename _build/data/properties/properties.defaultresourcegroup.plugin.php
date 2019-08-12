@@ -2,7 +2,7 @@
 /**
  * Properties file for DefaultResourceGroup plugin
  *
- * Copyright 2012-2017 Bob Ray <https://bobsguides.com>
+ * Copyright 2012-2019 Bob Ray <https://bobsguides.com>
  * Created on 07-26-2014
  *
  * @package defaultresourcegroup
