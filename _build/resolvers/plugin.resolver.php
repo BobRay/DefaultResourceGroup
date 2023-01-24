@@ -49,9 +49,9 @@ if (!function_exists('checkFields')) {
 $newEvents = array (
             );
 
-
-if ($object->xpdo) {
-    $modx =& $object->xpdo;
+/** @var modTransportPackage $transport */
+if ($transport->xpdo) {
+    $modx =& $transport->xpdo;
     switch ($options[xPDOTransport::PACKAGE_ACTION]) {
         case xPDOTransport::ACTION_INSTALL:
         case xPDOTransport::ACTION_UPGRADE:
