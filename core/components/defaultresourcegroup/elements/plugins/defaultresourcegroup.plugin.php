@@ -34,13 +34,13 @@
 
   $drg_groups = null;
 
-/** @var $modx modX */
-/** @var $scriptProperties array */
+/** @var modX $modx */
+/** @var array $scriptProperties */
+/** @var int $mode */
+/** @var modResource $resource */
+/** @var $grpObject modResourceGroupResource */
 
 function matchParent($resource) {
-
-    /** @var $resource modResource */
-    /** @var $grpObject modResourceGroupResource */
 
     $parentId = $resource->get('parent');
 
