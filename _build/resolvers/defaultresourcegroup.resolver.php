@@ -2,7 +2,7 @@
 /**
  * Resolver for DefaultResourceGroup extra
  *
- * Copyright 2012-2019 Bob Ray <https://bobsguides.com>
+ * Copyright 2012-2023 Bob Ray <https://bobsguides.com>
  * Created on 12-13-2014
  *
  * DefaultResourceGroup is free software; you can redistribute it and/or modify it under the
