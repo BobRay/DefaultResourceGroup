@@ -1,5 +1,13 @@
 <p>DefaultResourceGroup is a plugin for MODX Revolution. It automatically places newly created Resources into one or more designated Resource Groups.</p>
 
+<div class="box">
+    <h3>Upgrade Notes</h3>
+
+    <p>Upgrading may disable the plugin. If so, edit the plugin, set the plugin as active, and save it.</p>
+
+    <p>If you have not created your own property set for the plugin and attached it to the plugin, you will need to edit the plugin's properties with your values.</p>
+</div>
+
 <h3>Overview</h3>
 <p>The DefaultResourceGroup plugin places all new resources into a default Resource Group or groups. It will not change the Resource Group settings of existing resources when you edit them. If the user checks certain Resource Groups when creating the resource, those selections will be honored, but the plugin will also add the resource to the specified default Resource Groups.</p>
 
@@ -10,9 +18,10 @@
 <h3>Installing DefaultResourceGroup</h3>
 
 <p>
-Go to System | Package Management on the main menu in the MODX Manager and click on the &quot;Download Extras&quot; button. That will take you to the Revolution Repository (AKA Web Transport Facility). Put DefaultResourceGroup in the search box and press Enter. Click on the &quot;Download&quot; button, and once the package is downloaded, click on the &quot;Back to Package Manager&quot; button. That should bring you back to your Package Management grid. Click on the &quot;Install&quot; button next to DefaultResourceGroup in the grid. The DefaultResourceGroup package should now be installed.</p>
+Go to Extras -> Installer on the main menu in the MODX Manager and click on the &quot;Download Extras&quot; button. That will take you to the Revolution Repository. Put DefaultResourceGroup in the search box and press Enter. Click on the &quot;Download&quot; button, and once the package is downloaded, click on the &quot;Back to Package Manager&quot; button. That should bring you back to your Package Management grid. Click on the &quot;Install&quot; button next to DefaultResourceGroup in the grid. The DefaultResourceGroup package should now be installed.</p>
 
 <h3>Properties</h3>
+
 <p>There is only one property for the plugin, it is the <fixedpre>drg_groups</fixedpre> property. It contains either the name of a specific Resource Group to put new resources in, or a comma-separated list of group names (use no spaces). If the property is set to <fixedpre>Parent</fixedpre>, new resources will inherit the parent's resource groups.
 
 Rather than changing the default property of the plugin to set <fixedpre>drg_groups</fixedpre>, you should always create a Property Set.</p>
@@ -63,6 +72,6 @@ Rather than changing the default property of the plugin to set <fixedpre>drg_gro
 
 <h3>Enabling the DefaultResourceGroup Plugin</h3>
 
-<p>When installed or updated, the plugin is disabled. You can enable it by right-clicking on it in the Elements Tree and selecting &quot;Activate Plugin.&quot;</p>
+<p>When installed or updated, the plugin is disabled. You can enable it by editing the plugin, setting it to active, and saving the plugin.</p>
 
 <p>&nbsp;</p>
