@@ -16,14 +16,14 @@ $components = array(
     'packageName' => 'DefaultResourceGroup',  /* No spaces, no dashes */
     'packageNameLower' => $packageNameLower,
     'packageDescription' => 'DefaultResourceGroup project for MyComponent extra',
-    'version' => '1.2.0',
-    'release' => 'p1',
+    'version' => '1.2.3',
+    'release' => 'pl',
     'author' => 'Bob Ray',
     'email' => '<https://bobsguides.com>',
     'authorUrl' => 'https://bobsguides.com',
     'authorSiteName' => "Bob's Guides",
     'packageDocumentationUrl' => 'https://bobsguides.com/defaultresourcegroup-tutorial.html',
-    'copyright' => '2012-2015',
+    'copyright' => '2012-2023',
 
     /* no need to edit this except to change format */
     'createdon' => strftime('%m-%d-%Y'),
